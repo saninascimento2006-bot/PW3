@@ -1,23 +1,16 @@
 const express = require("express")
+const userController = require("./controllers/userController")
 const app = express()
 app.get("/", (request, response) => {
-    response.send("The cocain is not good for yoooooooouuuuuu!")
+    response.send("The cocain is good for youuuuuuuuuu!")
 })
 
-app.get("/users", (req, res) => {
-    res.send([
-        {
-            "id" : 1,
-            "name" : "Joao",
-            "idade" : 25
-        },
-        {
-            "id" : 2,
-            "name" : "Paulo",
-            "idade" : 27
-        }
+app.post("/users", (req, res ) => {
+    res.send("Tinha que colocar um negocio aq mas nao sei oq")
 
-    ])
 })
+
+
+app.get("/users", userController.getAllUsers)
 
 module.exports = app
