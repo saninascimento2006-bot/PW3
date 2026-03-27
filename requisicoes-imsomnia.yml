@@ -10,7 +10,7 @@ collection:
   - url: localhost:3000
     name: teste api
     meta:
-      id: req_f594ed4ee3234f4fad304597de1dcf01
+      id: req_1d62070c26df4d1282c2f614bcaab83b
       created: 1773959564586
       modified: 1773960291827
       isPrivate: false
@@ -33,7 +33,7 @@ collection:
   - url: localhost:3000/users
     name: lista usuarios
     meta:
-      id: req_b7beeb93d9c74c0b871a14f40a7765b0
+      id: req_11d088cb25414670abf38f0f4cac9296
       created: 1773960312591
       modified: 1773967011933
       isPrivate: false
@@ -54,11 +54,11 @@ collection:
         store: true
       rebuildPath: true
   - url: localhost:3000/users
-    name: New Request
+    name: cadastra_usuario
     meta:
-      id: req_58b32ad0d00944058d953d3123bc380f
+      id: req_a9bcce0e85664a77aeee3bce205d1623
       created: 1773961168179
-      modified: 1773962916679
+      modified: 1774567265555
       isPrivate: false
       description: ""
       sortKey: -1773961168179
@@ -85,16 +85,39 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: localhost:3000/users/12
+    name: busca usuario por id
+    meta:
+      id: req_020520df967b4c3aaa841acfb2fafc55
+      created: 1774570526382
+      modified: 1774573039783
+      isPrivate: false
+      description: ""
+      sortKey: -1774570526382
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1773959257423
-    modified: 1773959257423
+    created: 1774563828432
+    modified: 1774563828432
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1773959257420
-    modified: 1773959257420
+    created: 1774563828429
+    modified: 1774563828429
     isPrivate: false

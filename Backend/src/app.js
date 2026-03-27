@@ -12,4 +12,6 @@ app.post("/users",userController.createuser)
 
 app.get("/users", userController.getAllUsers)
 
+app.get("/users/:id", userController.getUserById)
+
 module.exports = app

@@ -1,8 +1,8 @@
-const usermodel = require("../models/userModel")
+const userModel = require("../models/userModel")
 
 
 const getAllUsers = (req, res) => {
-    const users = usermodel.findAll()
+    const users = userModel.findAll()
 
     return res.send(users)
 }
@@ -17,16 +17,28 @@ const createuser =  (req, res ) => {
         name : name,
         age : age
      }
-     const createdUser = usermodel.create(newUser)
+     const createdUser = userModel.create(newUser)
      
     res.status(201).json(createdUser)
 
 }
 
+const getUserById = (req, res) => {
+    const id = req.params.id
 
+    const user = userModel.findById(id)
+    
+    if ( !user ) {
+        return res.status(404).json({
+            message: "Usuário não escontrado."
+        })
+    }
 
+    return res.json(user)
+}
 
 module.exports = {
     getAllUsers,
-    createuser
+    createuser,
+    getUserById
 }
