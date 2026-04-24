@@ -1,5 +1,5 @@
 const express = require("express")
-const userController = require("./controllers/userController")
+const livroController = require("./controllers/livroController")
 
 const app = express()
 app.get("/", (request, response) => {
@@ -8,10 +8,14 @@ app.get("/", (request, response) => {
 
 app.use(express.json())
 
-app.post("/users",userController.createuser)
+app.post("/livros",livroController.createlivro)
 
-app.get("/users", userController.getAllUsers)
+app.get("/livros", livroController.getAlllivros)
 
-app.get("/users/:id", userController.getUserById)
+app.get("/livros/:id", livroController.getlivroById)
+
+app.delete("/livros/:id", livroController.deletelivro)
+
+app.put("/livros/:id", livroController.editlivro)
 
 module.exports = app
