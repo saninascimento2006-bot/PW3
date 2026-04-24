@@ -10,7 +10,7 @@ collection:
   - url: localhost:3000
     name: teste api
     meta:
-      id: req_1d62070c26df4d1282c2f614bcaab83b
+      id: req_4a6d6bf8892a4ba69f86a7709e68c34e
       created: 1773959564586
       modified: 1773960291827
       isPrivate: false
@@ -30,12 +30,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:3000/users
+  - url: localhost:3000/livros
     name: lista usuarios
     meta:
-      id: req_11d088cb25414670abf38f0f4cac9296
+      id: req_b2d5ace8049e445fb297ad092825c832
       created: 1773960312591
-      modified: 1773967011933
+      modified: 1776984718703
       isPrivate: false
       description: ""
       sortKey: -1773960312591
@@ -53,12 +53,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:3000/users
-    name: cadastra_usuario
+  - url: localhost:3000/livros
+    name: cadastrar_livro
     meta:
-      id: req_a9bcce0e85664a77aeee3bce205d1623
+      id: req_e06b2d26135c4a5db6a3ce5ace186fcb
       created: 1773961168179
-      modified: 1774567265555
+      modified: 1776984312771
       isPrivate: false
       description: ""
       sortKey: -1773961168179
@@ -67,8 +67,8 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"name" : "Pablo",
-        	"age" : "19"
+        	"titulo" : "Percy Jackson",
+        	"autor" : "Rick Riordan"
         } 
     headers:
       - name: Content-Type
@@ -85,12 +85,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:3000/users/12
+  - url: localhost:3000/livros/2
     name: busca usuario por id
     meta:
-      id: req_020520df967b4c3aaa841acfb2fafc55
+      id: req_a7a9b04ab9ea477ab07d3cf35f776b28
       created: 1774570526382
-      modified: 1774573039783
+      modified: 1776983605650
       isPrivate: false
       description: ""
       sortKey: -1774570526382
@@ -108,16 +108,71 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: localhost:3000/livros/1
+    name: deletar_livro
+    meta:
+      id: req_594ecb4826a64e7a99a73fed083d5fa8
+      created: 1776984322157
+      modified: 1776986570556
+      isPrivate: false
+      description: ""
+      sortKey: -1776984322157
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/livros/1
+    name: atualizar_livro
+    meta:
+      id: req_69fbebd6157e4128bb1cdbbe45f2db86
+      created: 1776985742264
+      modified: 1776989506391
+      isPrivate: false
+      description: ""
+      sortKey: -1776985742264
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"titulo": "Almanaque do Cascão",
+        	"autor" : "mauricio de souza"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1774563828432
-    modified: 1774563828432
+    created: 1776982780613
+    modified: 1776982780613
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1774563828429
-    modified: 1774563828429
+    created: 1776982780611
+    modified: 1776982780611
     isPrivate: false
